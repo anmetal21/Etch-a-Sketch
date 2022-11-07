@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(16,3vh);
+    grid-template-rows: repeat(16, 3vh);
+    grid-gap:1px;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+   
+}
+
+
+.box {
+    background-color: rebeccapurple;
+
+
+}
+
+.boxActive {
+    background-color: black;
+}
