@@ -6,10 +6,13 @@ body {
 }
 h1 {
     margin-top: 30px;
+    font-size: 60px;
+    font-style: italic;
 }
 .containment {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 5%;
     width: 100vw;
 }
 
@@ -21,7 +24,7 @@ h1 {
     width: 700px;
     height: 700px;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 10px;
 
    
 }
@@ -34,8 +37,8 @@ h1 {
 }
 
 button {
-    height: 70px;
+    height: 60px;
     width: 150px;
-    border-radius: 50px;
+    border-radius: 10px;
 }
 

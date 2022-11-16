@@ -4,7 +4,6 @@ const gridSize=document.getElementById("gridSize");
 const rainbow=document.getElementById("rainbow");
 const black=document.getElementById("black");
 const erase=document.getElementById("erase");
-
 let desiredSize='';
 let color="black";
 
@@ -12,9 +11,7 @@ let color="black";
 for (i=0; i<256; i++) {
     let box=document.createElement('div');
     box.classList.add('box');
-    box.addEventListener('mouseover', ()=> {
-        box.style.backgroundColor=`${color}`;
-    });
+    box.addEventListener('mouseover', selectColor);
     box.style.backgroundColor="lightslategray";
     container.appendChild(box);
     
@@ -23,7 +20,7 @@ for (i=0; i<256; i++) {
 //button functionality 
 
 black.addEventListener('click', ()=> {
-    color="black";
+    color='black';
 });
 
 erase.addEventListener('click', ()=> {
@@ -31,7 +28,7 @@ erase.addEventListener('click', ()=> {
 });
 
 rainbow.addEventListener('click', ()=> {
-    color=`${getRandom()}`;
+    color='random';
 }
 )
 
@@ -63,9 +60,7 @@ function createGrid(container, desiredSize) {
         let box=document.createElement('div');
         box.classList.add('box');
         box.style.backgroundColor="lightslategray";
-        box.addEventListener('mouseover', ()=> {
-            box.style.backgroundColor=`${color}`;
-        });
+        box.addEventListener('mouseover', selectColor);
         container.appendChild(box);
         }
     }
@@ -99,3 +94,13 @@ function getRandom(){
     return result;
     
   };
+
+
+  function selectColor() {
+    if (color=="random") {
+    this.style.backgroundColor= getRandom();
+    }
+    else {
+    this.style.backgroundColor=`${color}`;
+    }
+  }
