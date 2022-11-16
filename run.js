@@ -66,7 +66,7 @@ function createGrid(container, desiredSize) {
     }
 
 function userGrid(container) {
-    let desiredSize=Number(prompt("What grid size would you like?"));
+    let desiredSize=Number(prompt("Pick a size between 1 and 100."));
     container.style.cssText=`grid-template-columns: repeat(${desiredSize},1fr); grid-template-rows: repeat(${desiredSize}, 1fr);`    
     
     if (desiredSize<=100 && desiredSize>0) {
@@ -75,7 +75,7 @@ function userGrid(container) {
     
     }
     else {
-        alert ("Grid size must be between 0 and 100.");
+        alert ("Grid size must be between 1 and 100.");
         userGrid(container);
     }
 }
